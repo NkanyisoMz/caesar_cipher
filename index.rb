@@ -8,9 +8,9 @@ end
 def caesar_cipher(text, shift)
     encrypted_text = ""
     text.each_char do |char|
-      if char.match?(/[a-z]/i) # Check if the character is a letter
+      if char.match?(/[a-z]/) # Check if the character is a letter
         encrypted_text += wrap_around(char.downcase, shift)
-      elsif char.match?(/[A-Z]/i)
+      elsif char.match?(/[A-Z]/)
         encrypted_text += wrap_around_C(char.upcase, shift)
       else
         encrypted_text += char
